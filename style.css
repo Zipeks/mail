@@ -94,8 +94,9 @@ input:focus {
 }
 .typeOfSite > label {
    color: #2f2f36;
-   font-size: 1.2rem;
-   margin-right: 20px ;
+   font-size: 1.1rem;
+   margin-top: -7px;
+   margin-right: 20px;
 }
 input[type="radio"] {
    height: 20px;

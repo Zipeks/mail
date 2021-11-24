@@ -1,0 +1,134 @@
+:root {
+   --main-grey: #e1e0e7;
+   --main-purple:  #3e1f92;
+}
+body {
+   background-color: #f9f9fb;
+   font-family: 'Outfit', sans-serif;
+   color: #2f2f36;
+   box-sizing: border-box;
+}
+h1 {
+   font-weight: 600;
+}
+.main {
+   display: grid;
+   grid-template-rows: 150px 500px;
+   margin: 0 auto;
+   text-align: center;
+}
+.mainCont {
+   background-color: #FFF;
+   width: 1200px;
+   margin: 0 auto;
+   padding: 5px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr ;
+   border-radius: 25px;
+}
+.contactInfo {
+   color: #f9f9fb;
+   border-radius: 25px;
+   padding: 15px;
+   padding-left: 25px;
+   grid-column: 1;
+   background-color: var(--main-purple);
+   text-align: left;
+}
+.contactInfo h2 {
+   margin-top: 5px;
+}
+.contactInfo > p {
+   line-height: 45px;
+   color: #d4c2ee;
+}
+
+.formCont {
+   background-color: #FFF;
+   border-radius: 25px;
+   grid-column: 2/4;
+   padding: 15px;
+   padding-left: 30px;
+}
+
+.clientContactInfo {
+   color: #9b9cb1;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   font-weight: 500;
+   font-size: 1.2rem;
+
+}
+.clientContactInfo {
+   text-align: left;
+}
+
+.inputINFO {
+   border: none;
+   border-bottom: 3px solid var(--main-grey);
+   height: 25px;
+   width: 280px;
+   margin-bottom: 30px;
+   font-family: 'Outfit', sans-serif;
+   font-size: 0.9rem;
+}
+.inputINFO::placeholder {
+   color: #9999a5;
+   font-size: 0.9rem;
+}
+input:focus {
+   transition-duration: 0.5s ;
+   outline: none;
+   border-bottom: 3px solid var(--main-purple);
+}
+
+
+.typeOfSite > h3 {
+   color: rgb(46, 44, 44);
+   font-size: 1.5rem;
+   margin-top: 0px;
+} 
+.typeOfSite {
+   text-align: left;
+}
+.typeOfSite > label {
+   color: #2f2f36;
+   font-size: 1.2rem;
+   margin-right: 20px ;
+}
+input[type="radio"] {
+   height: 20px;
+   width: 20px;
+}
+
+.message {
+   text-align: left;
+}
+.message textarea {
+   outline: none;
+   resize: none;
+   border: none;
+   border-bottom: 3px solid var(--main-grey);
+   font-family: 'Outfit', sans-serif;
+}
+.message textarea:focus {
+   transition-duration: 0.5s ;
+   outline: none;
+   border-bottom: 3px solid var(--main-purple);
+}
+.btnCtn {
+   text-align: right;
+   margin-top: 20px;
+   margin-right: 20px;
+}
+.btnCtn button {
+   border: none;   
+   border-radius: 15px;
+   height: 50px;
+   width: 150px;
+   font-weight: 600;
+   font-size: 1rem;
+   background-color: var(--main-purple);
+   color: var(--main-grey);
+}

@@ -46,8 +46,8 @@ try {
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = $name . " ". $surname. " ". $phone. " ". date("d.m.Y H:i:s");
-    $mail->Body    = $message;
-    $mail->AltBody = $message;
+    $mail->Body    = $message."<br>".$phone."<br>".$mail;
+    $mail->AltBody = $message. "  ". $phone. "   ". $mail;
 
     $mail->send();
     $_SESSION['send']=true;

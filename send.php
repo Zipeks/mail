@@ -45,9 +45,9 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = $name . " ". $surname. " ". $phone. " ". date("d.m.Y H:i:s");
-    $mail->Body    = $message;
-    $mail->AltBody = $message;
+    $mail->Subject = "Potwierdzenie wysłania wiadomości ".$name . " ". $surname." ". date("d.m.Y H:i:s");
+    $mail->Body    = $message."<br>".$phone."<br>".$email;
+    $mail->AltBody = $message."  ".$phone."  ".$email;
 
     $mail->send();
     $_SESSION['send']=true;

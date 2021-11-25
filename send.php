@@ -27,7 +27,7 @@ try {
     //Server settings
     $mail->SMTPDebug = 0;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmai';                     //Set the SMTP server to send through
+    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'pratykiemail@gmail.com';                     //SMTP username
     $mail->Password   = 'zaq1@WSX';                               //SMTP password
@@ -52,7 +52,7 @@ try {
     $mail->send();
     header('Location: wyslano.php');
 } catch (Exception $e) {
-
+    
 }
 
 ?>

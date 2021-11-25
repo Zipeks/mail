@@ -1,3 +1,6 @@
+<?php
+   session_start();
+?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -15,6 +18,12 @@
       <div>
          <h1>Contact Us</h1>
          <p>Any question or remarks? Just write us  message!</p>
+         <?php 
+            if (isset($_SESSION['error'])) {
+               echo "<span style='color:red;'>".$_SESSION['error']."</span>";
+               unset($_SESSION['error']);
+            } 
+         ?>
       </div>   
          <div class="mainCont">
             <div class="contactInfo">
@@ -70,4 +79,7 @@
       </div>
    </div>
 </body>
+<?php
+   session_destroy();
+?>
 </html>

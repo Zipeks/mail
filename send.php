@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
    use PHPMailer\PHPMailer\PHPMailer;
    use PHPMailer\PHPMailer\SMTP;
    use PHPMailer\PHPMailer\Exception;
@@ -50,9 +50,10 @@ try {
     $mail->AltBody = $message;
 
     $mail->send();
+    $_SESSION['send']=true;
     header('Location: wyslano.php');
 } catch (Exception $e) {
-    
+    $_SESSION['error'] = "Error has occurred. Try sending message again later.";
 }
 
 ?>

@@ -1,4 +1,5 @@
 <?php
+
    use PHPMailer\PHPMailer\PHPMailer;
    use PHPMailer\PHPMailer\SMTP;
    use PHPMailer\PHPMailer\Exception;
@@ -9,7 +10,9 @@
    require 'PHPMailer-master/src/SMTP.php';
 
 
-
+    if  (!($name)) {
+        header('Location: index.php');
+    }
    $name = $_POST['name'];
    $surname = $_POST['surname'];
    $email = $_POST['email'];
@@ -22,9 +25,9 @@
 
 try {
     //Server settings
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+    $mail->SMTPDebug = 0;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->Host       = 'smtp.gmai';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
     $mail->Username   = 'pratykiemail@gmail.com';                     //SMTP username
     $mail->Password   = 'zaq1@WSX';                               //SMTP password
@@ -33,7 +36,7 @@ try {
 
     //Recipients
     $mail->setFrom('pratykiemail@gmail.com', 'Mailer');
-    $mail->addAddress('pratykiemail@gmail.com', 'Joe User');     //Add a recipient
+    $mail->addAddress('pratykiemail@gmail.com', 'Firma');     //Add a recipient
     $mail->addAddress($email, $name . " ". $surname);               //Name is optional
    //  $mail->addReplyTo('info@example.com', 'Information');
    //  $mail->addCC('cc@example.com');
@@ -49,7 +52,7 @@ try {
     $mail->send();
     header('Location: wyslano.php');
 } catch (Exception $e) {
-    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+
 }
 
 ?>

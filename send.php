@@ -16,6 +16,17 @@
    $name = $_POST['name'];
    $surname = $_POST['surname'];
    $email = $_POST['email'];
+   $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+   if (!(filter_var($email, FILTER_VALIDATE_EMAIL))) {
+       $_SESSION['validEmail']=true;
+       $_SESSION['error']= "Entered email is not valid.";
+       header('Location: index.php');
+       exit();
+   }
+
+
+
+
    $phone = $_POST['phone'];
    $type = $_POST['type'];
    $message= $_POST['message'];

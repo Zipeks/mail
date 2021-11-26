@@ -17,7 +17,7 @@
    <div class="main">
       <div>
          <h1>Contact Us</h1>
-         <p>Any question or remarks? Just write us  message!</p>
+         <p class="lightP">Any question or remarks? Just write us  message!</p>
          <?php 
             if (isset($_SESSION['error'])) {
                echo "<span style='color:red;'>".$_SESSION['error']."</span>";
@@ -68,11 +68,13 @@
                   </div>
                   <div class="message">
                      <label for="message"><h4>Message</h4></label>
-                     <textarea placeholder="Write your message here!" rows="3" cols="75" name="message" id="message" minlength="20" required></textarea>
+                     <textarea placeholder="Write your message ..." rows="3" cols="72" name="message" id="message" minlength="20" required></textarea>
+                     <div class="btnCtn" style="text-align: right;">
+                        <button>Send Message</button>
+                     </div>
                   </div>
-                  <div class="btnCtn" style="text-align: right;">
-                     <button>Send Message</button>
-                  </div>
+                  
+                  
                </form>
             </div>
          </div>

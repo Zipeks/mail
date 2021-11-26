@@ -1,6 +1,9 @@
 :root {
-   --main-grey: #e1e0e7;
+   --main-grey-200: #acaab3;
    --main-purple:  #3e1f92;
+   --main-grey-600: #8587a7;
+   --light-purple-200: #e6d3fb;
+   --light-purple-400: #a892e1;
 }
 body {
    background-color: #f9f9fb;
@@ -17,30 +20,33 @@ h1 {
    margin: 0 auto;
    text-align: center;
 }
+.lightP {
+   color: var(--main-grey-600);
+}
 .mainCont {
    background-color: #FFF;
-   width: 1200px;
+   width: 1050px;
    margin: 0 auto;
    padding: 5px;
    display: grid;
    grid-template-columns: 1fr 1fr 1fr ;
-   border-radius: 25px;
+   border-radius: 10px;
 }
 .contactInfo {
    color: #f9f9fb;
-   border-radius: 25px;
-   padding: 15px;
-   padding-left: 25px;
+   border-radius: 15px;
+   padding: 20px;
+   padding-left: 35px;
    grid-column: 1;
    background-color: var(--main-purple);
    text-align: left;
 }
-.contactInfo h2 {
-   margin-top: 5px;
-}
+.contactInfo > div > p {
+   color: var(--light-purple-400);
+} 
 .contactInfo > p {
    line-height: 45px;
-   color: #d4c2ee;
+   color: var(--light-purple-200);
 }
 
 .formCont {
@@ -66,29 +72,28 @@ h1 {
 
 .inputINFO {
    border: none;
-   border-bottom: 3px solid var(--main-grey);
+   border-bottom: 2px solid var(--main-grey-200);
    height: 25px;
-   width: 280px;
+   width: 300px;
    margin-bottom: 30px;
    font-family: 'Lato', sans-serif;
    font-size: 1rem;
    color: rgb(102, 98, 98);
 }
 .inputINFO::placeholder {
-   color: #9999a5;
+   color: var(--main-grey-200);
    font-size: 0.9rem;
 }
 input:focus {
    color: #0b0b0c;
    transition-duration: 0.5s ;
    outline: none;
-   border-bottom: 3px solid var(--main-purple);
+   border-bottom: 2px solid var(--main-purple);
 }
 
 
 .typeOfSite > h3 {
    color: rgb(46, 44, 44);
-   font-size: 1.5rem;
    margin-top: 0px;
 } 
 .typeOfSite {
@@ -97,12 +102,12 @@ input:focus {
 .typeOfSite > label {
    color: #2f2f36;
    font-size: 1.1rem;
-   margin-top: -7px;
    margin-right: 20px;
 }
 input[type="radio"] {
-   height: 20px;
-   width: 20px;
+   height: 15px;
+   width: 15px;
+   
 }
 
 .message {
@@ -112,26 +117,26 @@ input[type="radio"] {
    outline: none;
    resize: none;
    border: none;
-   border-bottom: 3px solid var(--main-grey);
+   border-bottom: 2px solid var(--main-grey-200);
    font-family: 'Lato', sans-serif;
 }
 .message textarea:focus {
    transition-duration: 0.5s ;
    outline: none;
-   border-bottom: 3px solid var(--main-purple);
+   border-bottom: 2px solid var(--main-purple);
 }
 .btnCtn {
    text-align: right;
    margin-top: 20px;
-   margin-right: 20px;
+   padding-right: 20px;
 }
 .btnCtn button {
    border: none;   
-   border-radius: 15px;
-   height: 50px;
-   width: 150px;
+   border-radius: 10px;
+   height: 60px;
+   width: 180px;
    font-weight: 600;
    font-size: 1rem;
    background-color: var(--main-purple);
-   color: var(--main-grey);
+   color:#FFF
 }

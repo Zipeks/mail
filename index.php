@@ -31,9 +31,16 @@
                   <h2>Contact Information</h2>
                   <p>Fill up the form and out Team will get back to up within 24 hours.</p>
                </div>
-               <p>+0123 4567 9810</p>
-               <p>hello@flowbase.com</p>
-               <p>102 Street 2714 Don</p>
+               <p><img src="img/phone.png" alt="phone-icon" class="filter-pink">+0123 4567 9810</p>
+               <p><img src="img/email.png" alt="email-icon" class="filter-pink">hello@flowbase.com</p>
+               <p><img src="img/place.png" alt="map-pin" class="filter-pink">102 Street 2714 Don</p>
+               <!-- <div class="orangeCircle"></div> -->
+               <div class="sociale" id="sociale">
+                  <a href=""><div><img src="img/fb-logo" alt=""></div></a>
+                  <a href=""><div><img src="img/tt-logo" alt=""></div></a>
+                  <a href=""><div><img src="img/ig-logo" alt=""></div></a>
+                  <a href=""><div><img src="img/in-logo" alt=""></div></a>
+               </div>
             </div>
             <div class="formCont">
                <form action="send.php" method="post">
@@ -80,6 +87,7 @@
          </div>
       </div>
    </div>
+<script src="script.js"></script>
 </body>
 <?php
    session_destroy();

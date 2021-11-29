@@ -4,12 +4,15 @@
    --main-grey-600: #8587a7;
    --light-purple-200: #e6d3fb;
    --light-purple-400: #a892e1;
+   --pinkPropably: #fa949d;
 }
 body {
    background-color: #f9f9fb;
    font-family: 'Lato', sans-serif;
    color: #2f2f36;
    box-sizing: border-box;
+   height: 96vh;
+  
 }
 h1 {
    font-weight: 600;
@@ -39,7 +42,9 @@ h1 {
    padding-left: 35px;
    grid-column: 1;
    background-color: var(--main-purple);
-   text-align: left;
+   text-align: left; 
+   position: relative;
+  
 }
 .contactInfo > div > p {
    color: var(--light-purple-400);
@@ -48,7 +53,45 @@ h1 {
    line-height: 45px;
    color: var(--light-purple-200);
 }
+.contactInfo p img {
+   height: 18px;
+   width: 18px;
+   position: relative;
+   bottom: -2px;
+   margin-right: 15px;
+}
+.filter-pink {
+   filter: invert(67%) sepia(15%) saturate(1147%) hue-rotate(306deg) brightness(98%) contrast(99%);
+}
+.sociale {
+   position: absolute;
+   bottom: 40px;
+   display: flex;
+   justify-content: space-between;
+   width: 170px;
+}
+.sociale a div {
+   height: 32px;
+   width: 32px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.sociale a div:hover {
+   border-radius: 50%;
+   background-color: var(--pinkPropably);
 
+}
+
+/* .orangeCircle {
+   position: absolute;
+   right: -100px;
+   bottom: -100px;
+   background-color: var(--pinkPropably);
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+} */
 .formCont {
    background-color: #FFF;
    border-radius: 25px;
@@ -64,10 +107,10 @@ h1 {
    grid-template-rows: 1fr 1fr;
    font-weight: 500;
    font-size: 1.2rem;
-
-}
-.clientContactInfo {
    text-align: left;
+}
+.clientContactInfo label {
+   font-size: 0.9rem;
 }
 
 .inputINFO {
@@ -82,7 +125,7 @@ h1 {
 }
 .inputINFO::placeholder {
    color: var(--main-grey-200);
-   font-size: 0.9rem;
+   font-size: 1rem;
 }
 input:focus {
    color: #0b0b0c;

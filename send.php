@@ -24,9 +24,6 @@
        exit();
    }
 
-
-
-
    $phone = $_POST['phone'];
    $type = $_POST['type'];
    $message= $_POST['message'];
